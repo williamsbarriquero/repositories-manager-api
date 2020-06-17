@@ -28,7 +28,7 @@ app.post('/repositories', (req, res) => {
     id: uuid(),
     title,
     url,
-    techs: techs.split(',').map((tech) => tech.trim()),
+    techs,
     likes: 0,
   };
 
@@ -60,7 +60,7 @@ app.put('/repositories/:id', verifyUUID, (req, res) => {
     id,
     title,
     url,
-    techs: techs.split(',').map((tech) => tech.trim()),
+    techs,
     likes: repository.likes,
   };
 
